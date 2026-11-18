@@ -3,9 +3,16 @@
     internal class Program
     {
         #region Q03-Method
-        static void PrintWelcomeMessage()
+        //static void PrintWelcomeMessage()
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+        #endregion
+
+        #region Q04-Method
+        static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Welcome to the Library!");
+            Console.WriteLine("Book title: " + title);
         }
         #endregion
         static void Main(string[] args)
@@ -35,8 +42,15 @@
             // Write a method called PrintWelcomeMessage that takes no parameters and prints
             //"Welcome to the Library!".Call it from Main.
 
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
 
+            #endregion
+
+            #region Q04-Call
+            //Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with
+            //"Clean Code"
+
+            PrintBookTitle("Clean Code");
             #endregion
         }
     }
