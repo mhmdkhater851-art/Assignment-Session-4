@@ -17,9 +17,16 @@
         #endregion
 
         #region Q05-Method
-        static void AddBonusPages(int pages)
+        //static void AddBonusPages(int pages)
+        //{
+        //    pages += 50;
+        //}
+        #endregion
+
+        #region Q06-Method
+        static void ApplyDiscount(double[] prices)
         {
-            pages += 50;
+            prices[0] -= 5;
         }
         #endregion
         static void Main(string[] args)
@@ -64,9 +71,22 @@
             //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             //int pages = 400; and print pages afterward. What do you expect to see, and why?
 
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
+            //int pages = 400;
+            //AddBonusPages(pages);
+            //Console.WriteLine(pages);
+            #endregion
+
+            #region Q06-Call
+            //            Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it
+            //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why
+
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
+            // Expected output: 20.5.
+            // The array reference is passed by value, but it still points to the same array object.
+            // Therefore, changing prices[0] inside the method changes the original array.
             #endregion
         }
     }
