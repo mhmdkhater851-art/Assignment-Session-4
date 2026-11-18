@@ -24,9 +24,16 @@
         #endregion
 
         #region Q06-Method
-        static void ApplyDiscount(double[] prices)
+        //static void ApplyDiscount(double[] prices)
+        //{
+        //    prices[0] -= 5;
+        //}
+        #endregion
+
+        #region Q07-Method
+        static void AddBonusPagesByRef(ref int pages)
         {
-            prices[0] -= 5;
+            pages += 50;
         }
         #endregion
         static void Main(string[] args)
@@ -81,13 +88,25 @@
             //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
             //see, and why
 
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine(prices[0]);
             // Expected output: 20.5.
             // The array reference is passed by value, but it still points to the same array object.
             // Therefore, changing prices[0] inside the method changes the original array.
             #endregion
+
+            #region Q07-Call
+            //            Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            //Call it and print pages afterward. How is the result different from question 5 ?
+            int pages = 400;
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages);
+
+            // Expected output: 450. Using ref allows the method to modify the original variable.
+            #endregion
+
+
         }
     }
 }
