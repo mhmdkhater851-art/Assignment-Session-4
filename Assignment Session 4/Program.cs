@@ -66,6 +66,16 @@ namespace Assignment_Session_4
         //    Console.WriteLine($"Title: {title}, Pages: {pages}");
         //}
         #endregion
+
+        #region Q11-Method
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+        #endregion
         static void Main(string[] args)
         {
             #region Q01
@@ -170,7 +180,15 @@ namespace Assignment_Session_4
             #region Q10
             //            Using the PrintBookInfo method from the question above, call it by naming the
             //parameters, passing pages before title.
-            PrintBookInfo(pages: 250, title: "Refactoring");
+            //PrintBookInfo(pages: 250, title: "Refactoring");
+            #endregion
+
+            #region Q11-Call
+            //            Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+            //Call it with three book titles.
+
+            PrintAllTitles("Clean Code", "DAN BROWN", "PROGRAMMING BOOK");
+
             #endregion
 
         }
