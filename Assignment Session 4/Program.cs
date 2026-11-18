@@ -1,4 +1,7 @@
-﻿namespace Assignment_Session_4
+﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Assignment_Session_4
 {
     internal class Program
     {
@@ -31,9 +34,16 @@
         #endregion
 
         #region Q07-Method
-        static void AddBonusPagesByRef(ref int pages)
+        //static void AddBonusPagesByRef(ref int pages)
+        //{
+        //    pages += 50;
+        //}
+        #endregion
+
+        #region Q08-Method
+        static void ReplaceArray(ref double[] prices)
         {
-            pages += 50;
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
         #endregion
         static void Main(string[] args)
@@ -99,11 +109,21 @@
             #region Q07-Call
             //            Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
             //Call it and print pages afterward. How is the result different from question 5 ?
-            int pages = 400;
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages);
+            //int pages = 400;
+            //AddBonusPagesByRef(ref pages);
+            //Console.WriteLine(pages);
 
             // Expected output: 450. Using ref allows the method to modify the original variable.
+            #endregion
+
+            #region Q08-Call
+            //            Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
+            //afterward.
+
+            double[] prices = { 25.5, 40.0 };
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
             #endregion
 
 
