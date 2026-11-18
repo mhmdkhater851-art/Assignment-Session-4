@@ -10,9 +10,16 @@
         #endregion
 
         #region Q04-Method
-        static void PrintBookTitle(string title)
+        //static void PrintBookTitle(string title)
+        //{
+        //    Console.WriteLine("Book title: " + title);
+        //}
+        #endregion
+
+        #region Q05-Method
+        static void AddBonusPages(int pages)
         {
-            Console.WriteLine("Book title: " + title);
+            pages += 50;
         }
         #endregion
         static void Main(string[] args)
@@ -50,7 +57,16 @@
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with
             //"Clean Code"
 
-            PrintBookTitle("Clean Code");
+            //PrintBookTitle("Clean Code");
+            #endregion
+
+            #region Q05-Call
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
             #endregion
         }
     }
