@@ -49,22 +49,22 @@ namespace Assignment_Session_4
         #endregion
 
         #region Q09-Method
-        static bool TryGetPrice(string title, out double price)
-        {
-            if (title == "Clean Code")
-            {
-                price = 25.5;
-                return true;
-            }
+        //static bool TryGetPrice(string title, out double price)
+        //{
+        //    if (title == "Clean Code")
+        //    {
+        //        price = 25.5;
+        //        return true;
+        //    }
 
-            price = 0;
-            return false;
-        }
+        //    price = 0;
+        //    return false;
+        //}
 
-        static void PrintBookInfo(string title, int pages = 300)
-        {
-            Console.WriteLine($"Title: {title}, Pages: {pages}");
-        }
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"Title: {title}, Pages: {pages}");
+        //}
         #endregion
         static void Main(string[] args)
         {
@@ -153,19 +153,25 @@ namespace Assignment_Session_4
             //and print the price if found
             //Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
             //it once with only a title, and once passing both a title and pages.
-            bool found = TryGetPrice("Clean Code", out double price);
 
-            if (found)
-            {
-                Console.WriteLine($"Price: {price}");
-            }
+            //bool found = TryGetPrice("Clean Code", out double price);
 
-            PrintBookInfo("Clean Code");
-            PrintBookInfo("Refactoring", 250);
+            //if (found)
+            //{
+            //    Console.WriteLine($"Price: {price}");
+            //}
+
+            //PrintBookInfo("Clean Code");
+            //PrintBookInfo("Refactoring", 250);
 
 
             #endregion
 
+            #region Q10
+            //            Using the PrintBookInfo method from the question above, call it by naming the
+            //parameters, passing pages before title.
+            PrintBookInfo(pages: 250, title: "Refactoring");
+            #endregion
 
         }
     }
